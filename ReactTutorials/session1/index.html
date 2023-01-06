@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+ </head>
+  <body>
+    <div id="root">
+
+    </div>
+    <div>-------End Of Plain Js--------</div>
+    <div id="jquery">
+
+    </div>
+    <div>-------End Of Jquery--------</div>
+    <div id="react">
+
+    </div>
+    <script>
+        // Plain Js
+        document.getElementById('root').innerHTML = '<h1>Learning With Vishal</h1><h1>This is from Plain Js</h1>'
+        // console.log("Jquery", $)
+        // Jquery
+        $('#jquery').html('<h1>Learning With Vishal</h1><h1>This is from JQuery</h1>');
+        const leaningHead = React.createElement('h1', {}, 'Learning With Vishal');
+        const leaningSub = React.createElement('h1', {}, 'This is from React');
+        const r = React.createElement('div', {}, leaningHead, leaningSub);
+        ReactDOM.createRoot(document.getElementById('react')).render(r);
+    </script>
+  </body>
+</html>
